@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Политика за поверителност на приложението Кой празнува?.">
+    <title>Поверителност · Кой празнува?</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell header-inner">
+        <a class="brand" href="../support/" aria-label="Кой празнува? — поддръжка">
+          <img src="../assets/brand/app_mark.svg" alt="">
+          <span>Кой празнува?</span>
+        </a>
+        <nav class="site-nav" aria-label="Основна навигация">
+          <a href="../support/">Поддръжка</a>
+          <a href="./">Поверителност</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="policy-intro">
+        <div class="eyebrow">Поверителност</div>
+        <h1>Данните ти остават под твой контрол.</h1>
+        <p class="lede">Тази политика описва как текущият production app „Кой празнува?“ пази локални данни и какво се обработва при избран Firebase вход и cloud sync.</p>
+        <p class="updated">Последна актуализация: 14 септември 2026 г.</p>
+      </section>
+
+      <div class="policy-list">
+        <section class="policy-section">
+          <h2>Local-first по подразбиране</h2>
+          <p>Приложението работи без акаунт. Любимите хора, рождените дни, избраните именни дати, напомнянията, бележките, настройките и последните търсения се пазят локално на устройството.</p>
+          <p>Аватарите на любимите хора, ако добавиш такива, са локални файлове на устройството. Те не се качват във Firestore и не участват в cloud sync или export/import.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Вход и optional cloud sync</h2>
+          <p>Входът е по избор и използва Firebase Authentication с наличните Google, Facebook или Apple providers. Firebase управлява удостоверяването; приложението не пази пароли, auth tokens или credentials в application logs.</p>
+          <p>При signed-in cloud sync във Firebase Cloud Firestore се пазят user-created favorite records под <strong>users/{uid}/people/{personId}</strong>. Това включва стабилен person ID, име, именни дати, рожден ден, напомняния, бележка, sync timestamps, tombstone state, schema version и технически writer installation ID.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Какво не се качва в cloud</h2>
+          <ul>
+            <li>bundled calendar data и официалните календарни източници;</li>
+            <li>notification permissions, notification schedule и локални настройки;</li>
+            <li>последни търсения и съдържание от локалния app cache;</li>
+            <li>локалните avatar файлове;</li>
+            <li>пароли, auth tokens и credentials.</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2>Известия</h2>
+          <p>Ако разрешиш известия, приложението планира локални известия за дневен преглед, именни дни, рождени дни и избрани reminders. Разрешението може да бъде отказано или променено от системните настройки. Тези известия не са cloud push service.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Достъп и защита</h2>
+          <p>Firestore security rules ограничават достъпа до records на съответния Firebase UID. Приложението не използва advertising ID, собствен analytics SDK, contacts integration, calendar integration или location tracking.</p>
+          <p>Публичното calendar съдържание се изтегля през HTTPS. Firebase Auth и Firestore обработват данни според собствените си условия и политики.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Изход, изтриване и контрол</h2>
+          <p>Sign out не изтрива локалните Favorites, аватарите или installation ID. Можеш да изтриеш отделни локални записи или всички локални app данни от секция „Данни“.</p>
+          <p>„Изтрий акаунта“ в „Профил и синхронизация“ изтрива cloud people records и Firebase Auth профила за приложението. Локалните данни остават на устройството и се изтриват отделно. За чувствително действие Firebase може да поиска повторно удостоверяване.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>Промени и контакт</h2>
+          <p>Ако добавим нов тип данни, provider или network функция, тази политика ще бъде прегледана и обновена преди съответния release.</p>
+          <p>За въпроси използвай <a href="mailto:borispopow@outlook.com">borispopow@outlook.com</a> или страницата за <a href="../support/">поддръжка</a>. Не изпращай пароли, auth tokens или credentials.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <span>© Кой празнува?</span>
+        <nav aria-label="Долна навигация"><a href="../support/">Поддръжка</a></nav>
+      </div>
+    </footer>
+  </body>
+</html>

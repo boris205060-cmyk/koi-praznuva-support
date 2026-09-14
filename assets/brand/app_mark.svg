@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Кой празнува?</title>
+  <desc id="desc">Заоблен календар с празнично слънце</desc>
+  <rect width="1024" height="1024" rx="224" fill="#7A1E2C"/>
+  <rect x="190" y="238" width="644" height="596" rx="112" fill="#FFF9F3"/>
+  <path d="M190 350c0-62 50-112 112-112h420c62 0 112 50 112 112v68H190z" fill="#C89B3C"/>
+  <rect x="314" y="172" width="68" height="156" rx="34" fill="#FFF9F3"/>
+  <rect x="642" y="172" width="68" height="156" rx="34" fill="#FFF9F3"/>
+  <circle cx="512" cy="610" r="126" fill="#7A1E2C"/>
+  <g stroke="#7A1E2C" stroke-width="32" stroke-linecap="round">
+    <path d="M512 438v-54"/>
+    <path d="M512 836v-54"/>
+    <path d="M340 610h-54"/>
+    <path d="M738 610h-54"/>
+    <path d="M390 488l-38-38"/>
+    <path d="M672 770l-38-38"/>
+    <path d="M634 488l38-38"/>
+    <path d="M352 770l38-38"/>
+  </g>
+  <circle cx="512" cy="610" r="58" fill="#C89B3C"/>
+</svg>

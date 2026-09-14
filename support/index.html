@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Поддръжка за Кой празнува? — български календар за именни дни и важни дати.">
+    <title>Поддръжка · Кой празнува?</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell header-inner">
+        <a class="brand" href="./" aria-label="Кой празнува? — начало">
+          <img src="../assets/brand/app_mark.svg" alt="">
+          <span>Кой празнува?</span>
+        </a>
+        <nav class="site-nav" aria-label="Основна навигация">
+          <a href="./">Поддръжка</a>
+          <a href="../privacy/">Поверителност</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-shell hero">
+        <div class="eyebrow">Поддръжка</div>
+        <h1>Не пропускай важния ден.</h1>
+        <p class="lede">„Кой празнува?“ събира именни дни, празници и рождените дни на любимите хора в един спокоен, local-first календар.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#faq">Виж често задаваните въпроси</a>
+          <a class="button button-secondary" href="../privacy/">Политика за поверителност</a>
+        </div>
+      </section>
+
+      <section id="faq" class="page-shell section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <h2 id="faq-title">Често задавани въпроси</h2>
+          <p>Кратки отговори за local-first работата, известията и избрания cloud sync.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Работи ли приложението без акаунт?</summary>
+            <p>Да. Любимите хора, настройките и локалните известия работят на устройството без вход. Cloud sync е напълно по избор.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Какво се синхронизира?</summary>
+            <p>След вход и включен sync се пази копие на създадените от теб favorite записи — име, именни дати, рожден ден, напомняния и бележка. Bundled calendar data, търсения, notification permissions и локалните аватари не се качват.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Какво става при изход?</summary>
+            <p>Изходът прекратява cloud сесията, но не изтрива любимите хора, локалните снимки или installation ID от устройството.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Как да изтрия cloud профила си?</summary>
+            <p>Отвори „Настройки“ → „Профил и синхронизация“ → „Изтрий акаунта“. Действието изтрива cloud records и Firebase Auth профила; локалните данни остават, докато не ги изтриеш отделно от секция „Данни“.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Защо не получавам известие?</summary>
+            <p>Провери дали известията са разрешени в системните настройки и дали дневното известие или конкретното напомняне е включено в приложението. Известията се планират локално.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="page-shell section" aria-labelledby="contact-title">
+        <div class="contact-card">
+          <div>
+            <h2 id="contact-title">Нужна е помощ?</h2>
+            <p>Опиши какво се е случило, модела на устройството и версията на приложението. Не изпращай пароли, auth tokens или други чувствителни данни.</p>
+          </div>
+          <a class="button button-secondary" href="mailto:borispopow@outlook.com">Свържи се с нас</a>
+        </div>
+        <p class="contact-note">Support: <a href="mailto:borispopow@outlook.com">borispopow@outlook.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <span>© Кой празнува?</span>
+        <nav aria-label="Долна навигация"><a href="../privacy/">Поверителност</a></nav>
+      </div>
+    </footer>
+  </body>
+</html>
